@@ -16,5 +16,13 @@ namespace PryEDChalimondC
         {
             InitializeComponent();
         }
+
+        private void btnCargarColor_Click(object sender, EventArgs e)
+        {
+            clsArchivoTexto archivo = new clsArchivoTexto();
+            archivo.Guardar(txtColor.Text);
+            MessageBox.Show("Color guardado correctamente.");
+
+        }
     }
 }

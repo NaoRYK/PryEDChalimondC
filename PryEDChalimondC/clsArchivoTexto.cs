@@ -1,21 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
+using System.Windows.Forms;
 namespace PryEDChalimondC
 {
     internal class clsArchivoTexto
     {
 
-        public string nombreArchivo = "Colores.csv";
+        public string nombreArchivo;
 
         public void Guardar(string codigo, string nombre)
         {
             StreamWriter sw = new StreamWriter(nombreArchivo, true);
             sw.Write(codigo+";");
             sw.WriteLine(nombre);
+            sw.Close();
+        }
+        public void Guardar(string dato1, string dato2,string dato3)
+        {
+            StreamWriter sw = new StreamWriter(nombreArchivo, true);
+            sw.Write(dato1 + ";");
+            sw.Write(dato2 + ";");
+            sw.WriteLine(dato3);
             sw.Close();
         }
         public void Guardar(string texto)
@@ -30,6 +40,23 @@ namespace PryEDChalimondC
             string texto = sr.ReadToEnd();
             sr.Close();
             return texto;
+        }
+
+        public void Leer(DataGridView dgv)
+        {
+            String DatoLeido;
+            dgv.Rows.Clear();
+            StreamReader AD = new StreamReader(nombreArchivo);
+            DatoLeido = AD.ReadLine();
+
+            while (DatoLeido !=null)
+            {
+
+                dgv.Rows.Add(DatoLeido.Split(';'));
+                DatoLeido = AD.ReadLine();
+                }
+
+            AD.Close();
         }
     }
 }

@@ -16,5 +16,21 @@ namespace PryEDChalimondC
         {
             InitializeComponent();
         }
+
+        private void frmClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            clsArchivoTexto x = new clsArchivoTexto();
+            x.nombreArchivo = "Clientes.csv";
+
+            // 1. Guardamos los datos nuevos
+            x.Guardar(txtCodigo.Text, txtDeuda.Text, txtNombre.Text);
+
+            x.Leer(dgvClientes);
+        }
     }
 }

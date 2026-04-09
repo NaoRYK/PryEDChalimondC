@@ -20,8 +20,14 @@ namespace PryEDChalimondC
         private void btnCargarColor_Click(object sender, EventArgs e)
         {
             clsArchivoTexto archivo = new clsArchivoTexto();
+            archivo.nombreArchivo = "Colores.csv";
             archivo.Guardar(txtColor.Text);
             MessageBox.Show("Color guardado correctamente.");
+
+        }
+
+        private void frmColores_Load(object sender, EventArgs e)
+        {
 
         }
     }

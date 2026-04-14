@@ -47,5 +47,17 @@ namespace PryEDChalimondC
             frmClientes frm = new frmClientes();
             frm.ShowDialog();
         }
+
+        private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCarreras frm = new frmCarreras();
+            frm.ShowDialog();
+        }
+
+        private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDatosAlumno frmDatosAlumno = new frmDatosAlumno();
+            frmDatosAlumno.ShowDialog();
+        }
     }
 }

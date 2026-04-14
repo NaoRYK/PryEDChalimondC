@@ -59,5 +59,11 @@ namespace PryEDChalimondC
             frmDatosAlumno frmDatosAlumno = new frmDatosAlumno();
             frmDatosAlumno.ShowDialog();
         }
+
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCola frmCola = new frmCola();
+            frmCola.ShowDialog();
+        }
     }
 }

@@ -30,11 +30,12 @@
         {
             this.txtColor = new System.Windows.Forms.TextBox();
             this.btnCargarColor = new System.Windows.Forms.Button();
+            this.lblColores = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtColor
             // 
-            this.txtColor.Location = new System.Drawing.Point(69, 84);
+            this.txtColor.Location = new System.Drawing.Point(70, 70);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(100, 20);
             this.txtColor.TabIndex = 0;
@@ -49,11 +50,21 @@
             this.btnCargarColor.UseVisualStyleBackColor = true;
             this.btnCargarColor.Click += new System.EventHandler(this.btnCargarColor_Click);
             // 
+            // lblColores
+            // 
+            this.lblColores.AutoSize = true;
+            this.lblColores.Location = new System.Drawing.Point(76, 36);
+            this.lblColores.Name = "lblColores";
+            this.lblColores.Size = new System.Drawing.Size(83, 13);
+            this.lblColores.TabIndex = 2;
+            this.lblColores.Text = "Ingrese un color";
+            // 
             // frmColores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(241, 250);
+            this.ClientSize = new System.Drawing.Size(241, 160);
+            this.Controls.Add(this.lblColores);
             this.Controls.Add(this.btnCargarColor);
             this.Controls.Add(this.txtColor);
             this.Name = "frmColores";
@@ -69,5 +80,6 @@
 
         private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.Button btnCargarColor;
+        private System.Windows.Forms.Label lblColores;
     }
 }

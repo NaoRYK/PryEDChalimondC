@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PryEDChalimondC
 {
-    public partial class datosDesarrolador : Form
+    public partial class frmDatosDesarrollador : Form
     {
-        public datosDesarrolador()
+        public frmDatosDesarrollador()
         {
             InitializeComponent();
         }

@@ -49,11 +49,11 @@
     <Compile Include="clsArchivoTexto.cs" />
     <Compile Include="clsCola.cs" />
     <Compile Include="clsNodo.cs" />
-    <Compile Include="datosDesarrolador.cs">
+    <Compile Include="frmDatosDesarrollador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="datosDesarrolador.Designer.cs">
-      <DependentUpon>datosDesarrolador.cs</DependentUpon>
+    <Compile Include="frmDatosDesarrollador.Designer.cs">
+      <DependentUpon>frmDatosDesarrollador.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCarreras.cs">
       <SubType>Form</SubType>
@@ -99,8 +99,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="datosDesarrolador.resx">
-      <DependentUpon>datosDesarrolador.cs</DependentUpon>
+    <EmbeddedResource Include="frmDatosDesarrollador.resx">
+      <DependentUpon>frmDatosDesarrollador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarreras.resx">
       <DependentUpon>frmCarreras.cs</DependentUpon>

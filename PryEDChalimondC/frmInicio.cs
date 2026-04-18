@@ -24,7 +24,7 @@ namespace PryEDChalimondC
 
         private void datosDelAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDatosAlumno frm = new frmDatosAlumno();
+            frmDatosDesarrollador frm = new frmDatosDesarrollador();
             frm.ShowDialog();
         }
 

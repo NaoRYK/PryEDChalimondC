@@ -42,6 +42,35 @@ namespace PryEDChalimondC
             return texto;
         }
 
+        public void Leer(ListBox Lista)
+        {
+            String datoLeido;
+            Lista.Items.Clear();
+            StreamReader AD = new StreamReader(nombreArchivo);
+            datoLeido = AD.ReadLine();
+
+            while (datoLeido != null)
+            {
+                Lista.Items.Add(datoLeido);
+                datoLeido = AD.ReadLine();
+            }
+            AD.Close();
+        }
+        public void Leer(ComboBox Lista)
+        {
+            String datoLeido;
+            Lista.Items.Clear();
+            StreamReader AD = new StreamReader(nombreArchivo);
+            datoLeido = AD.ReadLine();
+
+            while (datoLeido != null)
+            {
+                Lista.Items.Add(datoLeido);
+                datoLeido = AD.ReadLine();
+            }
+            AD.Close();
+            Lista.SelectedIndex = 0;
+        }
         public void Leer(DataGridView dgv)
         {
             String DatoLeido;

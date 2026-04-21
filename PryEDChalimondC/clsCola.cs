@@ -96,5 +96,17 @@ StreamWriter AD = new StreamWriter("Cola.txt", true, Encoding.UTF8);
             }
 
         }
+        public void Recorrer(ListBox combo)
+        {
+            clsNodo aux = Primero;
+            combo.Items.Clear();
+
+            while (aux != null)
+            {
+                combo.Items.Add(aux.Nombre);
+                aux = aux.Siguiente;
+            }
+
+        }
     }
 }

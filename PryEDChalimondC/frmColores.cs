@@ -21,7 +21,11 @@ namespace PryEDChalimondC
         {
             clsArchivoTexto archivo = new clsArchivoTexto();
             archivo.nombreArchivo = "Colores.csv";
-            archivo.Guardar(txtColor.Text);
+            if(txtColor.Text != "") 
+            
+            {
+                archivo.Guardar(txtColor.Text);
+            }
             MessageBox.Show("Color guardado correctamente.");
 
         }

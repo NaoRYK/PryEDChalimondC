@@ -65,5 +65,11 @@ namespace PryEDChalimondC
             frmCola frmCola = new frmCola();
             frmCola.ShowDialog();
         }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPila frmPila = new frmPila();
+            frmPila.ShowDialog();
+        }
     }
 }

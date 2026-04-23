@@ -33,7 +33,7 @@
             this.txtTramAdd = new System.Windows.Forms.TextBox();
             this.lblTextoCodigo = new System.Windows.Forms.Label();
             this.lblTextoNombre = new System.Windows.Forms.Label();
-            this.lblTextoTramite = new System.Windows.Forms.Label();
+            this.lblTramite = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblTram = new System.Windows.Forms.Label();
+            this.lblTextoTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -96,14 +96,14 @@
             this.lblTextoNombre.TabIndex = 4;
             this.lblTextoNombre.Text = "Nombre";
             // 
-            // lblTextoTramite
+            // lblTramite
             // 
-            this.lblTextoTramite.AutoSize = true;
-            this.lblTextoTramite.Location = new System.Drawing.Point(12, 65);
-            this.lblTextoTramite.Name = "lblTextoTramite";
-            this.lblTextoTramite.Size = new System.Drawing.Size(42, 13);
-            this.lblTextoTramite.TabIndex = 5;
-            this.lblTextoTramite.Text = "Tramite";
+            this.lblTramite.AutoSize = true;
+            this.lblTramite.Location = new System.Drawing.Point(12, 65);
+            this.lblTramite.Name = "lblTramite";
+            this.lblTramite.Size = new System.Drawing.Size(42, 13);
+            this.lblTramite.TabIndex = 5;
+            this.lblTramite.Text = "Tramite";
             // 
             // label4
             // 
@@ -205,7 +205,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblTram);
+            this.groupBox1.Controls.Add(this.lblTextoTramite);
             this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Controls.Add(this.lblCodigo);
             this.groupBox1.Controls.Add(this.btnEliminar);
@@ -219,16 +219,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Eliminar elemento";
             // 
-            // lblTram
+            // lblTextoTramite
             // 
-            this.lblTram.AutoSize = true;
-            this.lblTram.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblTram.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTram.Location = new System.Drawing.Point(106, 59);
-            this.lblTram.Name = "lblTram";
-            this.lblTram.Size = new System.Drawing.Size(105, 15);
-            this.lblTram.TabIndex = 20;
-            this.lblTram.Text = "                                ";
+            this.lblTextoTramite.AutoSize = true;
+            this.lblTextoTramite.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblTextoTramite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTextoTramite.Location = new System.Drawing.Point(106, 59);
+            this.lblTextoTramite.Name = "lblTextoTramite";
+            this.lblTextoTramite.Size = new System.Drawing.Size(105, 15);
+            this.lblTextoTramite.TabIndex = 20;
+            this.lblTextoTramite.Text = "                                ";
             // 
             // lblNombre
             // 
@@ -244,7 +244,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnAgregar);
-            this.groupBox2.Controls.Add(this.lblTextoTramite);
+            this.groupBox2.Controls.Add(this.lblTramite);
             this.groupBox2.Controls.Add(this.lblTextoNombre);
             this.groupBox2.Controls.Add(this.lblTextoCodigo);
             this.groupBox2.Controls.Add(this.txtTramAdd);
@@ -309,7 +309,7 @@
         private System.Windows.Forms.TextBox txtTramAdd;
         private System.Windows.Forms.Label lblTextoCodigo;
         private System.Windows.Forms.Label lblTextoNombre;
-        private System.Windows.Forms.Label lblTextoTramite;
+        private System.Windows.Forms.Label lblTramite;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -325,7 +325,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn tramite;
-        private System.Windows.Forms.Label lblTram;
+        private System.Windows.Forms.Label lblTextoTramite;
         private System.Windows.Forms.Label lblNombre;
     }
 }

@@ -66,7 +66,7 @@
             this.groupBox2.Controls.Add(this.txtTramAdd);
             this.groupBox2.Controls.Add(this.txtNameAdd);
             this.groupBox2.Controls.Add(this.txtCodigoAdd);
-            this.groupBox2.Location = new System.Drawing.Point(58, 98);
+            this.groupBox2.Location = new System.Drawing.Point(5, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(233, 124);
             this.groupBox2.TabIndex = 26;
@@ -140,7 +140,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(291, 94);
+            this.groupBox1.Location = new System.Drawing.Point(238, 9);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(261, 128);
             this.groupBox1.TabIndex = 25;
@@ -226,7 +226,7 @@
             this.codigo,
             this.nombre,
             this.tramite});
-            this.dgvElementos.Location = new System.Drawing.Point(289, 222);
+            this.dgvElementos.Location = new System.Drawing.Point(236, 137);
             this.dgvElementos.Name = "dgvElementos";
             this.dgvElementos.ReadOnly = true;
             this.dgvElementos.Size = new System.Drawing.Size(264, 130);
@@ -253,14 +253,14 @@
             // lstElementos
             // 
             this.lstElementos.FormattingEnabled = true;
-            this.lstElementos.Location = new System.Drawing.Point(73, 222);
+            this.lstElementos.Location = new System.Drawing.Point(20, 137);
             this.lstElementos.Name = "lstElementos";
             this.lstElementos.Size = new System.Drawing.Size(210, 134);
             this.lstElementos.TabIndex = 23;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(141, 186);
+            this.button1.Location = new System.Drawing.Point(88, 101);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 27);
             this.button1.TabIndex = 22;
@@ -270,7 +270,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PryEDChalimondC.Properties.Resources.Pila_svg;
-            this.pictureBox1.Location = new System.Drawing.Point(559, 97);
+            this.pictureBox1.Location = new System.Drawing.Point(506, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(183, 259);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -282,7 +282,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(695, 280);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

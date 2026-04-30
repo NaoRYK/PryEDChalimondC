@@ -274,7 +274,8 @@
             this.Controls.Add(this.lstElementos);
             this.Controls.Add(this.button1);
             this.Name = "frmListaSimple";
-            this.Text = "frmListaSimple";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lista simple";
             ((System.ComponentModel.ISupportInitialize)(this.dgvElementos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

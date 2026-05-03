@@ -50,7 +50,7 @@ namespace PryEDChalimondC
 
                 lblCodigo.Text = Convert.ToString(fila.Primero.Codigo);
                 lblNombre.Text = fila.Primero.Nombre;
-                lblTramite.Text = fila.Primero.Tramite;
+                lblTextoTramite.Text = fila.Primero.Tramite;
                 fila.Eliminar(fila.Primero);
                 fila.Recorrer(dgvElementos);
                 fila.Recorrer(lstElementos);

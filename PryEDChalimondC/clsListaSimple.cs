@@ -20,15 +20,29 @@ namespace PryEDChalimondC
 
         public void Agregar(clsNodo Nuevo)
         {
-            if (Primero == null)
+            if (Primero == null || Nuevo.Codigo < Primero.Codigo)
             {
+
+                Nuevo.Siguiente = Primero;
                 Primero = Nuevo;
 
             }
             else
             {
-                Nuevo.Siguiente = Primero;
-                Primero = Nuevo;
+              
+              
+                
+                    clsNodo _aux = Primero;
+                    while(_aux.Siguiente != null && _aux.Siguiente.Codigo < Nuevo.Codigo )
+                    {
+                        _aux = _aux.Siguiente;
+                    }
+
+                    Nuevo.Siguiente = _aux.Siguiente;
+
+                    _aux.Siguiente = Nuevo;
+
+                
             }
         }
 
@@ -43,7 +57,7 @@ namespace PryEDChalimondC
         public void Recorrer()
         {
             clsNodo aux = Primero;
-            StreamWriter AD = new StreamWriter("Cola.txt", true, Encoding.UTF8);
+            StreamWriter AD = new StreamWriter("ListaSimple.txt", true, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
 
             AD.WriteLine("Codigo;Nombre;Tramite");
@@ -94,4 +108,4 @@ namespace PryEDChalimondC
 }
 
 
-}
+

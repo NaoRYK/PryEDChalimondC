@@ -12,9 +12,51 @@ namespace PryEDChalimondC
 {
     public partial class frmListaSimple : Form
     {
+
+        clsListaSimple lista = new clsListaSimple();
         public frmListaSimple()
         {
             InitializeComponent();
+        }
+
+     
+
+    
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo n = new clsNodo();
+            n.Codigo = Convert.ToInt32(txtCodigoAdd.Text);
+            n.Nombre = txtNameAdd.Text;
+            n.Tramite = txtTramAdd.Text;
+            lista.Agregar(n);
+            lista.Recorrer(dgvElementos);
+            lista.Recorrer(lstElementos);
+
+            txtCodigoAdd.Clear();
+            txtNameAdd.Clear();
+            txtTramAdd.Clear();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (lista.Primero != null)
+            {
+
+                lblCodigo.Text = Convert.ToString(lista.Primero.Codigo);
+                lblNombre.Text = lista.Primero.Nombre;
+                lblTramite.Text = lista.Primero.Tramite;
+                lista.Eliminar(lista.Primero);
+                lista.Recorrer(dgvElementos);
+                lista.Recorrer(lstElementos);
+            }
+            else
+            {
+                MessageBox.Show("No hay elementos para eliminar.");
+                lbltxttram.Text = "";
+                lblNombre.Text = "";
+                lblCodigo.Text = "";
+            }
         }
     }
 }

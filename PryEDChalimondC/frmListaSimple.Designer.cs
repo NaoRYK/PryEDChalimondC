@@ -40,14 +40,14 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblTextoTramite = new System.Windows.Forms.Label();
+            this.lblTramite = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtCodigoAdd = new System.Windows.Forms.TextBox();
             this.txtNameAdd = new System.Windows.Forms.TextBox();
             this.txtTramAdd = new System.Windows.Forms.TextBox();
             this.lblTextoCodigo = new System.Windows.Forms.Label();
             this.lblTextoNombre = new System.Windows.Forms.Label();
-            this.lblTramite = new System.Windows.Forms.Label();
+            this.lbltxttram = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvElementos)).BeginInit();
@@ -140,6 +140,7 @@
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCodigo
             // 
@@ -163,20 +164,20 @@
             this.lblNombre.TabIndex = 19;
             this.lblNombre.Text = "                                ";
             // 
-            // lblTextoTramite
+            // lblTramite
             // 
-            this.lblTextoTramite.AutoSize = true;
-            this.lblTextoTramite.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblTextoTramite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTextoTramite.Location = new System.Drawing.Point(106, 59);
-            this.lblTextoTramite.Name = "lblTextoTramite";
-            this.lblTextoTramite.Size = new System.Drawing.Size(105, 15);
-            this.lblTextoTramite.TabIndex = 20;
-            this.lblTextoTramite.Text = "                                ";
+            this.lblTramite.AutoSize = true;
+            this.lblTramite.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblTramite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTramite.Location = new System.Drawing.Point(106, 59);
+            this.lblTramite.Name = "lblTramite";
+            this.lblTramite.Size = new System.Drawing.Size(105, 15);
+            this.lblTramite.TabIndex = 20;
+            this.lblTramite.Text = "                                ";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblTextoTramite);
+            this.groupBox1.Controls.Add(this.lblTramite);
             this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Controls.Add(this.lblCodigo);
             this.groupBox1.Controls.Add(this.btnEliminar);
@@ -229,14 +230,14 @@
             this.lblTextoNombre.TabIndex = 4;
             this.lblTextoNombre.Text = "Nombre";
             // 
-            // lblTramite
+            // lbltxttram
             // 
-            this.lblTramite.AutoSize = true;
-            this.lblTramite.Location = new System.Drawing.Point(12, 65);
-            this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(42, 13);
-            this.lblTramite.TabIndex = 5;
-            this.lblTramite.Text = "Tramite";
+            this.lbltxttram.AutoSize = true;
+            this.lbltxttram.Location = new System.Drawing.Point(12, 65);
+            this.lbltxttram.Name = "lbltxttram";
+            this.lbltxttram.Size = new System.Drawing.Size(42, 13);
+            this.lbltxttram.TabIndex = 5;
+            this.lbltxttram.Text = "Tramite";
             // 
             // btnAgregar
             // 
@@ -246,11 +247,12 @@
             this.btnAgregar.TabIndex = 19;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnAgregar);
-            this.groupBox2.Controls.Add(this.lblTramite);
+            this.groupBox2.Controls.Add(this.lbltxttram);
             this.groupBox2.Controls.Add(this.lblTextoNombre);
             this.groupBox2.Controls.Add(this.lblTextoCodigo);
             this.groupBox2.Controls.Add(this.txtTramAdd);
@@ -299,14 +301,14 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblTextoTramite;
+        private System.Windows.Forms.Label lblTramite;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtCodigoAdd;
         private System.Windows.Forms.TextBox txtNameAdd;
         private System.Windows.Forms.TextBox txtTramAdd;
         private System.Windows.Forms.Label lblTextoCodigo;
         private System.Windows.Forms.Label lblTextoNombre;
-        private System.Windows.Forms.Label lblTramite;
+        private System.Windows.Forms.Label lbltxttram;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.GroupBox groupBox2;
     }

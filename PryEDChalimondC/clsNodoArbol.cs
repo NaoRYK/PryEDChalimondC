@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace PryEDChalimondC
 {
-    internal class clsNodo
+    internal class clsNodoArbol
     {
         private Int32 cod;
         private String nom;
         private String tram;
-        private clsNodo sig;
-        private clsNodo ant;
-        private clsNodo izq;
-        private clsNodo der;
+
+
+
+        private clsNodoArbol izq;
+        private clsNodoArbol der;
 
         public Int32 Codigo
         {
@@ -32,25 +33,14 @@ namespace PryEDChalimondC
             set { tram = value; }
         }
 
-        public clsNodo Siguiente
-        {
-            get { return sig; }
-            set { sig = value; }
 
-        }
-        public clsNodo Anterior
-        {
-            get { return ant; }
-            set { ant = value; }
-
-        }
-        public clsNodo Izquierda
+        public clsNodoArbol Izquierda
         {
             get { return izq; }
             set { izq = value; }
 
         }
-        public clsNodo Derecha
+        public clsNodoArbol Derecha
         {
             get { return der; }
             set { der = value; }

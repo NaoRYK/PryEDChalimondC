@@ -16,6 +16,7 @@ namespace PryEDChalimondC
         public frmListaDoble()
         {
             InitializeComponent();
+            radioAsc.Checked = true;    
         }
 
         clsListaDoble lista = new clsListaDoble();
@@ -63,7 +64,7 @@ namespace PryEDChalimondC
 
                 lblCodigo.Text = Convert.ToString(lista.Primero.Codigo);
                 lblNombre.Text = lista.Primero.Nombre;
-                lblTramite.Text = lista.Primero.Tramite;
+                lblTextoTramite.Text = lista.Primero.Tramite;
                 lista.Eliminar(lista.Primero);
                 lista.Recorrer(dgvElementos);
                 lista.Recorrer(lstElementos);
@@ -76,5 +77,36 @@ namespace PryEDChalimondC
                 lblCodigo.Text = "";
             }
         }
+
+        private void btnRecorrer_Click(object sender, EventArgs e)
+        {
+            lista.Recorrer();
+        }
+
+        private void dgvElementos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void lstElementos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lista.Recorrer(lstElementos.Text, lstElementos, cmbSeleccionado);
+        }
+
+        private void radioAsc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioAsc.Checked)
+            {
+                lista.Recorrer(dgvElementos);
+                lista.Recorrer(lstElementos);
+            }
+            else
+            {
+                lista.RecorrerDesc(dgvElementos);
+                lista.RecorrerDesc(lstElementos);
+            }
+        }
     }
+
+
+
 }

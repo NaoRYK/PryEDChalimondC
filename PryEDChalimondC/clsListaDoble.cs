@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PryEDChalimondC
 {
@@ -15,7 +16,7 @@ namespace PryEDChalimondC
 
         public clsNodo Primero
         {
-            get{ return pri; }
+            get { return pri; }
             set { pri = value; }
         }
 
@@ -29,14 +30,14 @@ namespace PryEDChalimondC
 
         public void Agregar(clsNodo Nuevo)
         {
-            if(Primero == null)
+            if (Primero == null)
             {
                 Primero = Nuevo;
                 Ultimo = Nuevo;
             }
             else
             {
-                if(Nuevo.Codigo < Primero.Codigo)
+                if (Nuevo.Codigo < Primero.Codigo)
                 {
                     Primero.Anterior = Nuevo;
                     Nuevo.Siguiente = Primero;
@@ -44,7 +45,7 @@ namespace PryEDChalimondC
                 }
                 else
                 {
-                    if(Nuevo.Codigo > Ultimo.Codigo)
+                    if (Nuevo.Codigo > Ultimo.Codigo)
                     {
                         Ultimo.Siguiente = Nuevo;
                         Nuevo.Anterior = Ultimo;
@@ -54,7 +55,7 @@ namespace PryEDChalimondC
                     {
                         clsNodo _aux = Primero;
 
-                        while(_aux.Siguiente != null && _aux.Siguiente.Codigo < Nuevo.Codigo)
+                        while (_aux.Siguiente != null && _aux.Siguiente.Codigo < Nuevo.Codigo)
                         {
                             _aux = _aux.Siguiente;
                         }
@@ -72,8 +73,8 @@ namespace PryEDChalimondC
                             _aux.Siguiente = Nuevo;
                         }
 
-                          
-                      
+
+
                     }
                 }
 
@@ -134,25 +135,25 @@ namespace PryEDChalimondC
         {
             if (Primero == null) return;
 
-            // es unico nodo?
+            // es unico nodo
             if (nodoEliminado.Anterior == null && nodoEliminado.Siguiente == null)
             {
                 Primero = null;
                 Ultimo = null;
             }
-            // es el primero?
+            // es el primero
             else if (nodoEliminado.Anterior == null)
             {
                 Primero = nodoEliminado.Siguiente;
                 Primero.Anterior = null;
             }
-            // es el último?
+            // es el último
             else if (nodoEliminado.Siguiente == null)
             {
                 Ultimo = nodoEliminado.Anterior;
                 Ultimo.Siguiente = null;
             }
-            // esta en el medio?
+            // esta en el medio
             else
             {
                 nodoEliminado.Anterior.Siguiente = nodoEliminado.Siguiente;
@@ -161,6 +162,84 @@ namespace PryEDChalimondC
 
             nodoEliminado.Anterior = null;
             nodoEliminado.Siguiente = null;
+        }
+
+        public void Recorrer(string nombre, ListBox comboSeleccionado, ListBox comboAñadir)
+        {
+            clsNodo nodo = new clsNodo();
+            nodo = Primero;
+            while (nodo.Nombre != nombre)
+            {
+                nodo = nodo.Siguiente;
+
+            }
+            if (comboSeleccionado.Items.Contains(nodo.Nombre))
+            {
+                comboAñadir.Items.Clear();
+                while (nodo != null)
+                {
+                    comboAñadir.Items.Add(nodo.Nombre);
+                    nodo = nodo.Anterior;
+
+                }
+
+            }
+
+        }
+
+        public void RecorrerDesc(ListBox combo)
+        {
+            clsNodo aux = Ultimo;
+            combo.Items.Clear();
+
+            while (aux != null)
+            {
+                combo.Items.Add(aux.Nombre);
+                aux = aux.Anterior;
+            }
+
+        }
+
+        public void RecorrerDesc(DataGridView Grilla)
+        {
+            clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
+
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Anterior;
+            }
+
+
+        }
+
+        public void RecorrerDesc(ComboBox combo)
+        {
+            clsNodo aux = Ultimo;
+            combo.Items.Clear();
+
+            while (aux != null)
+            {
+                combo.Items.Add(aux.Nombre);
+                aux = aux.Anterior;
+            }
+
+        }
+
+        public void RecorrerDesc()
+        {
+            clsNodo aux = Ultimo;
+            StreamWriter AD = new StreamWriter("ListaSimple.txt", true, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            while (aux != null)
+            {
+                AD.WriteLine(aux.Codigo + ";" + aux.Nombre + ";" + aux.Tramite);
+                aux = aux.Anterior;
+            }
+
         }
     }
 }

@@ -50,6 +50,9 @@
             this.tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstElementos = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.cmbSeleccionado = new System.Windows.Forms.ListBox();
+            this.radioAsc = new System.Windows.Forms.RadioButton();
+            this.radioDesc = new System.Windows.Forms.RadioButton();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvElementos)).BeginInit();
@@ -229,6 +232,7 @@
             this.dgvElementos.ReadOnly = true;
             this.dgvElementos.Size = new System.Drawing.Size(264, 130);
             this.dgvElementos.TabIndex = 35;
+            this.dgvElementos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvElementos_CellContentClick);
             // 
             // codigo
             // 
@@ -255,6 +259,7 @@
             this.lstElementos.Name = "lstElementos";
             this.lstElementos.Size = new System.Drawing.Size(210, 134);
             this.lstElementos.TabIndex = 34;
+            this.lstElementos.SelectedIndexChanged += new System.EventHandler(this.lstElementos_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -265,17 +270,52 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // cmbSeleccionado
+            // 
+            this.cmbSeleccionado.FormattingEnabled = true;
+            this.cmbSeleccionado.Location = new System.Drawing.Point(511, 138);
+            this.cmbSeleccionado.Name = "cmbSeleccionado";
+            this.cmbSeleccionado.Size = new System.Drawing.Size(210, 134);
+            this.cmbSeleccionado.TabIndex = 38;
+            // 
+            // radioAsc
+            // 
+            this.radioAsc.AutoSize = true;
+            this.radioAsc.Location = new System.Drawing.Point(533, 48);
+            this.radioAsc.Name = "radioAsc";
+            this.radioAsc.Size = new System.Drawing.Size(43, 17);
+            this.radioAsc.TabIndex = 39;
+            this.radioAsc.TabStop = true;
+            this.radioAsc.Text = "Asc";
+            this.radioAsc.UseVisualStyleBackColor = true;
+            this.radioAsc.CheckedChanged += new System.EventHandler(this.radioAsc_CheckedChanged);
+            // 
+            // radioDesc
+            // 
+            this.radioDesc.AutoSize = true;
+            this.radioDesc.Location = new System.Drawing.Point(533, 79);
+            this.radioDesc.Name = "radioDesc";
+            this.radioDesc.Size = new System.Drawing.Size(50, 17);
+            this.radioDesc.TabIndex = 40;
+            this.radioDesc.TabStop = true;
+            this.radioDesc.Text = "Desc";
+            this.radioDesc.UseVisualStyleBackColor = true;
+            // 
             // frmListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 282);
+            this.ClientSize = new System.Drawing.Size(730, 282);
+            this.Controls.Add(this.radioDesc);
+            this.Controls.Add(this.radioAsc);
+            this.Controls.Add(this.cmbSeleccionado);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvElementos);
             this.Controls.Add(this.lstElementos);
             this.Controls.Add(this.button1);
             this.Name = "frmListaDoble";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListaDoble";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -283,6 +323,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvElementos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -310,5 +351,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tramite;
         private System.Windows.Forms.ListBox lstElementos;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox cmbSeleccionado;
+        private System.Windows.Forms.RadioButton radioAsc;
+        private System.Windows.Forms.RadioButton radioDesc;
     }
 }

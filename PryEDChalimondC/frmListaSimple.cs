@@ -19,19 +19,31 @@ namespace PryEDChalimondC
             InitializeComponent();
         }
 
-     
 
-    
+
+
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+    
+            if (!int.TryParse(txtCodigoAdd.Text, out int codigoValidado))
+            {
+                MessageBox.Show("El código debe ser un número entero.", "Error de formato",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCodigoAdd.Focus();
+                return; 
+            }
+
+
             clsNodo n = new clsNodo();
-            n.Codigo = Convert.ToInt32(txtCodigoAdd.Text);
+            n.Codigo = codigoValidado;
             n.Nombre = txtNameAdd.Text;
             n.Tramite = txtTramAdd.Text;
+
             lista.Agregar(n);
             lista.Recorrer(dgvElementos);
             lista.Recorrer(lstElementos);
+
 
             txtCodigoAdd.Clear();
             txtNameAdd.Clear();

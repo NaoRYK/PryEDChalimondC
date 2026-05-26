@@ -89,19 +89,19 @@
             // datosDelAlumnoToolStripMenuItem
             // 
             this.datosDelAlumnoToolStripMenuItem.Name = "datosDelAlumnoToolStripMenuItem";
-            this.datosDelAlumnoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.datosDelAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.datosDelAlumnoToolStripMenuItem.Text = "Datos del alumno...";
             this.datosDelAlumnoToolStripMenuItem.Click += new System.EventHandler(this.datosDelAlumnoToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(173, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -215,14 +215,15 @@
             // arbolToolStripMenuItem
             // 
             this.arbolToolStripMenuItem.Name = "arbolToolStripMenuItem";
-            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.arbolToolStripMenuItem.Text = "Arbol";
             // 
             // grafosToolStripMenuItem
             // 
             this.grafosToolStripMenuItem.Name = "grafosToolStripMenuItem";
-            this.grafosToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.grafosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.grafosToolStripMenuItem.Text = "Grafos";
+            this.grafosToolStripMenuItem.Click += new System.EventHandler(this.grafosToolStripMenuItem_Click);
             // 
             // baseDeDatosToolStripMenuItem
             // 

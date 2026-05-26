@@ -83,5 +83,11 @@ namespace PryEDChalimondC
             frmListaDoble frmListaDoble = new frmListaDoble();
             frmListaDoble.ShowDialog();
         }
+
+        private void grafosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGrafo frmGrafo = new frmGrafo(); 
+            frmGrafo.ShowDialog();
+        }
     }
 }

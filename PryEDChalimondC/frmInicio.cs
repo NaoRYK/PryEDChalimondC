@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -88,6 +88,12 @@ namespace PryEDChalimondC
         {
             frmGrafo frmGrafo = new frmGrafo(); 
             frmGrafo.ShowDialog();
+        }
+
+        private void arbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbol fArbol = new frmArbol();
+            fArbol.ShowDialog();
         }
     }
 }

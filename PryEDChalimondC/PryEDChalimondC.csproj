@@ -58,6 +58,12 @@
     <Compile Include="clsNodo.cs" />
     <Compile Include="clsNodoArbol.cs" />
     <Compile Include="clsPila.cs" />
+    <Compile Include="frmArbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArbol.Designer.cs">
+      <DependentUpon>frmArbol.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDatosDesarrollador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Pila.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grafo.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="management_id_icon_216424.ico" />

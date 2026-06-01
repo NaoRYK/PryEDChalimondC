@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,7 @@ namespace PryEDChalimondC
     internal class clsGrafo
     {
 
-        private String[] Ciudades = new string[] { "Cordoba", "Santa fé", "Buenos aires", "Santiago", "Gualeguay" };
+        private String[] Ciudades = new string[] { "Córdoba", "Mendoza", "Santa Fe", "Buenos Aires", "Salta" };
         private Decimal[,] Precio = new decimal[5, 5];
 
 

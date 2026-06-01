@@ -1,4 +1,4 @@
-﻿namespace PryEDChalimondC
+namespace PryEDChalimondC
 {
     partial class frmInicio
     {
@@ -217,6 +217,7 @@
             this.arbolToolStripMenuItem.Name = "arbolToolStripMenuItem";
             this.arbolToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.arbolToolStripMenuItem.Text = "Arbol";
+            this.arbolToolStripMenuItem.Click += new System.EventHandler(this.arbolToolStripMenuItem_Click);
             // 
             // grafosToolStripMenuItem
             // 

@@ -1,4 +1,4 @@
-﻿namespace PryEDChalimondC
+namespace PryEDChalimondC
 {
     partial class frmGrafo
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTramite = new System.Windows.Forms.Label();
+            this.txtPrecioCarga = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -65,22 +65,20 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(35, 22);
+            this.pictureBox1.Image = global::PryEDChalimondC.Properties.Resources.grafo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 151);
+            this.pictureBox1.Size = new System.Drawing.Size(250, 180);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lblTramite
+            // txtPrecioCarga
             // 
-            this.lblTramite.AutoSize = true;
-            this.lblTramite.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblTramite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTramite.Location = new System.Drawing.Point(106, 64);
-            this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(105, 15);
-            this.lblTramite.TabIndex = 27;
-            this.lblTramite.Text = "                                ";
+            this.txtPrecioCarga.Location = new System.Drawing.Point(106, 62);
+            this.txtPrecioCarga.Name = "txtPrecioCarga";
+            this.txtPrecioCarga.Size = new System.Drawing.Size(103, 20);
+            this.txtPrecioCarga.TabIndex = 27;
             // 
             // label4
             // 
@@ -129,6 +127,7 @@
             this.btnBorrar.TabIndex = 31;
             this.btnBorrar.Text = "Eliminar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // label7
             // 
@@ -163,7 +162,7 @@
             this.groupBox1.Controls.Add(this.cmbOrigenCarga);
             this.groupBox1.Controls.Add(this.btnCargar);
             this.groupBox1.Controls.Add(this.btnBorrarTodo);
-            this.groupBox1.Controls.Add(this.lblTramite);
+            this.groupBox1.Controls.Add(this.txtPrecioCarga);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
@@ -198,6 +197,7 @@
             this.btnCargar.TabIndex = 37;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnBorrarTodo
             // 
@@ -207,6 +207,7 @@
             this.btnBorrarTodo.TabIndex = 36;
             this.btnBorrarTodo.Text = "Borrar todo";
             this.btnBorrarTodo.UseVisualStyleBackColor = true;
+            this.btnBorrarTodo.Click += new System.EventHandler(this.btnBorrarTodo_Click);
             // 
             // groupBox2
             // 
@@ -249,6 +250,7 @@
             this.btnConsultar.TabIndex = 35;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // groupBox3
             // 
@@ -293,6 +295,7 @@
             this.btnVerTodo.TabIndex = 30;
             this.btnVerTodo.Text = "Ver todos los viajes";
             this.btnVerTodo.UseVisualStyleBackColor = true;
+            this.btnVerTodo.Click += new System.EventHandler(this.btnVerTodo_Click);
             // 
             // btnListarOrigen
             // 
@@ -302,6 +305,7 @@
             this.btnListarOrigen.TabIndex = 29;
             this.btnListarOrigen.Text = "Listar origen";
             this.btnListarOrigen.UseVisualStyleBackColor = true;
+            this.btnListarOrigen.Click += new System.EventHandler(this.btnListarOrigen_Click);
             // 
             // btnListarDestinos
             // 
@@ -311,6 +315,7 @@
             this.btnListarDestinos.TabIndex = 28;
             this.btnListarDestinos.Text = "Listar destinos";
             this.btnListarDestinos.UseVisualStyleBackColor = true;
+            this.btnListarDestinos.Click += new System.EventHandler(this.btnListarDestinos_Click);
             // 
             // cmbHasta
             // 
@@ -347,7 +352,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmGrafo";
-            this.Text = "frmGrafo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Operaciones en un Grafo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -363,7 +369,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblTramite;
+        private System.Windows.Forms.TextBox txtPrecioCarga;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;

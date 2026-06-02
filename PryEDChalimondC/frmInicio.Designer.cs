@@ -244,6 +244,7 @@ namespace PryEDChalimondC
             this.consultaDeUnaTablaToolStripMenuItem.Name = "consultaDeUnaTablaToolStripMenuItem";
             this.consultaDeUnaTablaToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.consultaDeUnaTablaToolStripMenuItem.Text = "Consulta de una tabla";
+            this.consultaDeUnaTablaToolStripMenuItem.Click += new System.EventHandler(this.consultaDeUnaTablaToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 

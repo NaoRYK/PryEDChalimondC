@@ -95,5 +95,11 @@ namespace PryEDChalimondC
             frmArbol fArbol = new frmArbol();
             fArbol.ShowDialog();
         }
+
+        private void consultaDeUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaUnaTabla fConsulta = new frmConsultaUnaTabla();
+            fConsulta.ShowDialog();
+        }
     }
 }

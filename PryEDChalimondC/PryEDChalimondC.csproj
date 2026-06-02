@@ -58,6 +58,13 @@
     <Compile Include="clsNodo.cs" />
     <Compile Include="clsNodoArbol.cs" />
     <Compile Include="clsPila.cs" />
+    <Compile Include="clsBaseDatos.cs" />
+    <Compile Include="frmConsultaUnaTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaUnaTabla.Designer.cs">
+      <DependentUpon>frmConsultaUnaTabla.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmArbol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +147,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDatosDesarrollador.resx">
       <DependentUpon>frmDatosDesarrollador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaUnaTabla.resx">
+      <DependentUpon>frmConsultaUnaTabla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarreras.resx">
       <DependentUpon>frmCarreras.cs</DependentUpon>

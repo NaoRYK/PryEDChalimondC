@@ -14,11 +14,39 @@ namespace PryEDChalimondC
         private OleDbCommand comando = new OleDbCommand();
         private OleDbDataAdapter adaptador = new OleDbDataAdapter();
 
-        private string CadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Libreria.mdb";
-        private string CadenaConexionBackup = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Libreria.mdb";
+        private string CadenaConexionBackup = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Libreria.mdb";
+        private string CadenaConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Libreria.mdb";
 
 
 
+
+        public void Listar(DataGridView Grilla, String intstruccionSQL)
+        {
+            try
+            {
+                conexion.ConnectionString = CadenaConexion;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = intstruccionSQL;
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataSet DS = new DataSet();
+                adaptador.Fill(DS, "Resultado");
+
+                Grilla.DataSource = null;
+                Grilla.DataSource = DS.Tables["Resultado"];
+                conexion.Close();
+
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al listar datos:\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        /*
         public void Listar(DataGridView Grilla, string tabla)
         {
             try
@@ -68,6 +96,6 @@ namespace PryEDChalimondC
                     MessageBox.Show("Error al conectar a la base de datos:\n" + ex.Message, "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
+        }*/
     }
 }

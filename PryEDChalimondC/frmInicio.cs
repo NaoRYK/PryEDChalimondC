@@ -101,5 +101,11 @@ namespace PryEDChalimondC
             frmConsultaUnaTabla fConsulta = new frmConsultaUnaTabla();
             fConsulta.ShowDialog();
         }
+
+        private void consultaDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultSQL frmConsultSQL = new frmConsultSQL();
+            frmConsultSQL.ShowDialog();
+        }
     }
 }

@@ -107,5 +107,10 @@ namespace PryEDChalimondC
             frmConsultSQL frmConsultSQL = new frmConsultSQL();
             frmConsultSQL.ShowDialog();
         }
+        private void operacionesEnBaseDeDaotsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOperacionesBD frm = new frmOperacionesBD();
+            frm.ShowDialog();
+        }
     }
 }

@@ -262,7 +262,8 @@ namespace PryEDChalimondC
             // 
             this.operacionesEnBaseDeDaotsToolStripMenuItem.Name = "operacionesEnBaseDeDaotsToolStripMenuItem";
             this.operacionesEnBaseDeDaotsToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
-            this.operacionesEnBaseDeDaotsToolStripMenuItem.Text = "Operaciones en base de daots";
+            this.operacionesEnBaseDeDaotsToolStripMenuItem.Text = "Operaciones en base de datos";
+            this.operacionesEnBaseDeDaotsToolStripMenuItem.Click += new System.EventHandler(this.operacionesEnBaseDeDaotsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 

@@ -24,6 +24,10 @@ namespace PryEDChalimondC
         {
             try
             {
+                if (conexion.State == ConnectionState.Open)
+                {
+                    conexion.Close();
+                }
                 conexion.ConnectionString = CadenaConexion;
                 conexion.Open();
 

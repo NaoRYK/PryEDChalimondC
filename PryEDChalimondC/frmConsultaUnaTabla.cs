@@ -38,7 +38,7 @@ namespace PryEDChalimondC
             if (cboTablas.SelectedItem != null)
             {
                 string tablaSeleccionada = cboTablas.SelectedItem.ToString();
-                baseDatos.Listar(dgvGrilla, tablaSeleccionada);
+                baseDatos.Listar(dgvGrilla, "SELECT * FROM " + tablaSeleccionada);
             }
             else
             {

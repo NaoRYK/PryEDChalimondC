@@ -71,6 +71,12 @@
     <Compile Include="frmArbol.Designer.cs">
       <DependentUpon>frmArbol.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOperacionesBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperacionesBD.Designer.cs">
+      <DependentUpon>frmOperacionesBD.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConsultSQL.cs">
       <SubType>Form</SubType>
     </Compile>

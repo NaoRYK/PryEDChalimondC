@@ -112,5 +112,11 @@ namespace PryEDChalimondC
             frmOperacionesBD frm = new frmOperacionesBD();
             frm.ShowDialog();
         }
+
+        private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultasVarias frm = new frmConsultasVarias();
+            frm.ShowDialog();
+        }
     }
 }

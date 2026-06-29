@@ -275,6 +275,7 @@ namespace PryEDChalimondC
             this.consultasVariasConOperacionesToolStripMenuItem.Name = "consultasVariasConOperacionesToolStripMenuItem";
             this.consultasVariasConOperacionesToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.consultasVariasConOperacionesToolStripMenuItem.Text = "Consultas varias con operaciones...";
+            this.consultasVariasConOperacionesToolStripMenuItem.Click += new System.EventHandler(this.consultasVariasConOperacionesToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 

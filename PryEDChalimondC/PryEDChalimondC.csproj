@@ -77,6 +77,12 @@
     <Compile Include="frmOperacionesBD.Designer.cs">
       <DependentUpon>frmOperacionesBD.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultasVarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultasVarias.Designer.cs">
+      <DependentUpon>frmConsultasVarias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConsultSQL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConsultasVarias.resx">
+      <DependentUpon>frmConsultasVarias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConsultSQL.resx">
       <DependentUpon>frmConsultSQL.cs</DependentUpon>
     </EmbeddedResource>
